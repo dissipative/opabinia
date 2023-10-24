@@ -12,10 +12,10 @@ docker.prune:
 
 # checks before commit
 hooks.style:
-	gofumpt -l -w . && go vet $$(go list ./... | grep -v /vendor/)
+	@gofumpt -l -w . && go vet $$(go list ./... | grep -v /vendor/)
 
 hooks.version-update:
-	scripts/version_update.sh
+	@scripts/version_update.sh
 
 hooks.setup:
 	@cp scripts/pre-commit-hooks.sh .git/hooks/pre-commit
