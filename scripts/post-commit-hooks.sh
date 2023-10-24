@@ -13,3 +13,4 @@ version=$(cat $version_file)
 
 # Tag the commit with the version number
 git tag "v$version"
+git push origin "v$version"
