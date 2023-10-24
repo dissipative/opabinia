@@ -5,7 +5,7 @@ I started it as the engine of [my personal website](https://artemfrolov.me).
 
 ## What's inside
 
-- A simple web server with [`Chi`](https://github.com/go-chi/chi/v5) router for serving static files and markdown
+- A simple web server with [`Chi`](https://github.com/go-chi/chi) router for serving static files and markdown
   pages.
 - [Go Markdown parser](https://github.com/gomarkdown/markdown) for pages, complemented with custom rendering extensions.
 - Structured logging via [slog](https://pkg.go.dev/golang.org/x/exp/slog).
@@ -47,4 +47,4 @@ You can find example of project structure and settings in `layout` directory.
 - [x] Migrate to Go 1.21.
 - [ ] Increase test coverage.
 - [ ] Implement cache TTL.
-- [ ] Live reloading for serve mode
+- [ ] Live reloading for `--serve` mode
