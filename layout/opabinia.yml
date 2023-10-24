@@ -1,0 +1,20 @@
+server:
+  port: 4321
+  log_level: "debug"
+  cache_expire: 3000
+  cache_size: 0
+  env: "development" # development env will not cache any files and will colorize logs
+
+template:
+  file: "templates/default.tmpl"
+  description: "Site example"
+  title_prefix: "Opabinia build"
+  paths:
+    custom_css: "/assets/styles.css"
+    custom_js: ""
+    favicon_dir: "/assets/favicon"   # see favicons section in default template
+    webmanifest: ""
+
+markdown:
+  code_default_lang: "bash"
+  syntax_theme: "tango" # themes list: https://xyproto.github.io/splash/docs/

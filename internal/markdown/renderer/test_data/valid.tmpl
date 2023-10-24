@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="{{ .Template.Description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  {{if .CustomCSS}}<link rel="stylesheet" href={{ .CustomCSS }}>{{end}}
+  {{if .Webmanifest}}<link rel="manifest" href={{ .Webmanifest }}>{{end}}
+  {{if .CustomJS}}<script crossorigin="anonymous" defer="defer" type="application/javascript" src={{ .CustomJS }}></script>{{end}}
+  {{if .TitlePrefix}}<title>{{ .TitlePrefix }} {{ .Title }}</title>{{else}}<title>{{ .Title }}</title>{{end}}
+</head>
+
+<body>
+  <div class="op-markdown">
+    {{ .Body }}
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="{{ .Description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      line-height: 1.4;
+      letter-spacing: .2pt;
+    }
+
+    h1, h2, h3 {
+      margin: .5em 0;
+    }
+
+    ul {
+      padding-left: 2em;
+      margin: 0;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      margin: .7em 0;
+    }
+
+    p>img {
+      margin: auto;
+      display: block;
+    }
+
+    .footnotes {
+      padding-top: 2em;
+    }
+
+    .op-markdown {
+      max-width: 55vw;
+      margin: 0 auto;
+      overflow: auto;
+    }
+
+    .op-code {
+      padding: .2em;
+    }
+  </style>
+  <style media="screen and (max-width: 1000px)">
+    .op-markdown {
+      max-width: 95%;
+    }
+  </style>
+  {{if .CustomCSS}}<link rel="stylesheet" href={{ .CustomCSS }}>{{end}}
+  {{if .FaviconDir}}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .FaviconDir }}/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .FaviconDir }}/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ .FaviconDir }}/favicon-16x16.png">
+  {{end}}
+  {{if .Webmanifest}}<link rel="manifest" href={{ .Webmanifest }}>{{end}}
+  {{if .CustomJS}}<script crossorigin="anonymous" defer="defer" type="application/javascript" src={{ .CustomJS }}></script>{{end}}
+  {{if .TitlePrefix}}<title>{{ .TitlePrefix }} {{ .Title }}</title>{{else}}<title>{{ .Title }}</title>{{end}}
+</head>
+
+<body>
+  <div class="op-markdown">
+    {{ .Body }}
+  </div>
+</body>
+
+</html>
