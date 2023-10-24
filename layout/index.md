@@ -11,9 +11,9 @@ Check this [hyperlink](pages/other_page.md)!
 ## Working with Opabinia
 
 1. Install opabinia engine
-   ```shell
-   go install github.com/dissipative/opabinia
-   ```
+
+       go install github.com/dissipative/opabinia
+
 2. Create directory with your markdown files and assets:
     - generate new project with `opabinia --init <project name>`
     - put .md files to `<project dir>/pages/`
