@@ -4,6 +4,8 @@ This is a sample markdown page with image and _formatting_[^1].
 
 Check this [hyperlink](pages/other_page.md)!
 
+Check this external [hyperlink](https://go.dev)!
+
 ---
 
 <br>
